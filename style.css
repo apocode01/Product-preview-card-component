@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&display=swap');
+
+:root {
+    --green500: hsl(158, 36%, 37%);
+    --green700: hsl(158, 42%, 18%);
+    --black: hsl(212, 21%, 14%);
+    --grey: hsl(228, 12%, 48%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 0.0625rem);
+    background-color: var(--cream);
+    padding: 1.25rem;
+}
+
+.perfume {
+    width: 100%;
+}
+
+.container {
+    background-color: var(--white);
+    margin-bottom: 2rem;
+    max-width: 350px;
+    font-size: clamp(0.813rem, 0.875rem + 0.25vw, 1rem);
+    border-radius: 0.625rem;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.item {
+    color: var(--grey);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-decoration: capital;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    margin-bottom: 2rem;
+}
+
+.title {
+    color: var(--black);
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.description {
+    color: var(--grey);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.price h1 {
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    color: var(--green500);
+}
+
+.price p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--grey);
+    text-decoration: line-through;
+    margin-left: 1.25rem;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--green500);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-radius: 0.625rem;
+}
+
+.button:hover {
+    background-color: var(--green700);
+}
+
+.button img {
+    max-width: 100%;
+    margin-right: 0.625rem;
+}
+
+.attribution { 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 11px; 
+    text-align: center; 
+}
+    
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        max-width: 700px;
+        max-height: fit-content;
+    }
+
+    picture {    
+        width: 50%;
+    }
+
+    .perfume {
+        height: 100%; 
+        object-fit: cover;
+    }
+
+    .content {
+        width: 50%;
+    }
+}
