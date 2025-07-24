@@ -21,7 +21,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 0.0625rem);
+    min-height: calc(100vh - 0.0625rem);
     background-color: var(--cream);
     padding: 1.25rem;
 }
